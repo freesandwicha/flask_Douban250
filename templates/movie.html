@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Douban Movie Top 250 display</title>
+    <meta name="description" content="Douban250">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="" name="ZRTHEMES">
+
+    <!-- Favicons -->
+
+
+    <!-- Google Fonts -->
+    <link href="static/css/css2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="static/css/css21.css" rel="stylesheet">
+    <link href="static/css/css22.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="static/css/aos.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="static/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="static/css/styles.css" rel="stylesheet">
+</head>
+
+<div data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="#" class="logo d-flex align-items-center">
+                <img src="static/picture/logo.png" alt="logo">
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="/index" class="">Home</a></li>
+                    <li><a href="/movie" class="">Movie</a></li>
+                    <li><a href="/rating" class="">Rating</a></li>
+                    <li><a href="/wordcloud" class="">Wordcloud</a></li>
+                    <li><a href="/team" class="">Team</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+        </div>
+    </header>
+</div>
+<!-- End Header -->
+
+<!--  Hero Section  -->
+<section id="hero" class="hero sticked-header-offset">
+
+    <div id="particles-js"></div>
+    <div id="repulse-circle-div"></div>
+    <div class="container position-relative">
+        <div class="row gy-10 aos-init aos-animate">
+            <div class="col-lg-7  order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                <h2 data-aos="fade-up">The list of Douban TOP250 movies.</h2>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Hero Section -->
+
+
+<!-- Start Service Section -->
+
+<div class="top-icon-box position-relative">
+    <div class="container position-relative">
+        <table class="table table-dark">
+            <tr class="alert-warning">
+                <td>Rank</td>
+                <td>The Chinese movie name</td>
+                <td>The foreign movie name</td>
+                <td>Rating</td>
+                <td>Number of reviewers</td>
+                <td>One-sentence review</td>
+            </tr>
+
+            {% for movie in movies %}
+                <tr>
+                    <td>{{ movie[0] }}</td>
+                    <td>
+                        <a href="{{ movie[1] }}" target="_blank">
+                            {{ movie[3] }}
+                        </a>
+                    </td>
+                    <td>{{ movie[4] }}</td>
+                    <td>{{ movie[5] }}</td>
+                    <td>{{ movie[6] }}</td>
+                    <td>{{ movie[7] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+
+<!-- End Service Section -->
+
+<!-- Featured -->
+
+
+<!--  Footer  -->
+
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/glightbox.min.js"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/aos.js"></script>
+<script src="static/js/swiper-bundle.min.js"></script>
+<script src="static/js/plugins.js"></script>
+<script src="static/js/purecounter_vanilla.js"></script>
+<script src="static/js/validator.min.js"></script>
+<script src="static/js/contactform.js"></script>
+<script src="static/js/particles.min.js"></script>
+<script src="static/js/script.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/js/main.js"></script>
+
+
+</body>
+</html>
